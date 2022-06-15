@@ -6,13 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:00 by myoshika          #+#    #+#             */
-/*   Updated: 2022/05/30 01:46:53 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/15 16:02:15 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	
-}
