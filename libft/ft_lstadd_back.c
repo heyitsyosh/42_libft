@@ -6,13 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:28:26 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/01 12:08:52 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/15 16:15:47 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	
-}
