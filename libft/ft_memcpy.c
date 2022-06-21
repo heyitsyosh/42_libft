@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/15 16:12:27 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/19 00:20:04 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	unsigned char	*uc_dst;
+	unsigned char	*uc_src;
+	size_t			i;
 
+	uc_dst = dst;
+	uc_src = (unsigned char *)src;
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
-		*(char *)(dst + i) = *(char *)(src + i);
-		i--;
+		*(uc_dst + i) = *(uc_src + i);
+		i++;
 	}
 	return (dst);
 }

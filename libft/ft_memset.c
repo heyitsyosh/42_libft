@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 22:53:41 by myoshika          #+#    #+#             */
-/*   Updated: 2022/05/30 01:33:22 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/19 00:16:44 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*c_b;
+	unsigned char	*uc_b;
 	size_t			i;
 
-	c_b = b;
+	uc_b = b;
 	i = 0;
 	while (i < len)
 	{
-		c_b[i] = c;
+		*(uc_b + i) = c;
 		i++;
 	}
 	return (b);
