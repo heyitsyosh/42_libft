@@ -6,7 +6,13 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:11 by myoshika          #+#    #+#             */
-/*   Updated: 2022/05/28 23:29:13 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/21 00:01:29 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "libft.h"
+
+// void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+// {
+	
+// }

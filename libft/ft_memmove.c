@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:28 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/15 16:10:18 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/21 14:47:44 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	unsigned char	*uc_dst;
+	unsigned char	*uc_src;
+	int				i;
 
-	i = 0;
+	uc_dst = dst;
+	uc_src = (unsigned char *)src;
+	i = 1;
 	if (dst > src)
 	{
-		dst += len;
-		src += len;
-		while (len > 0)
-		{
-			*(char *)(dst + len) = *(char *)(src + len);
-			len--;
-		}
+		uc_dst += len - 1;
+		uc_src += len - 1;
+		i = -1;
 	}
-	else
+	while (len--)
 	{
-		while (i <= len)
-		{
-			*(char *)(dst + i) = *(char *)(src + i);
-			i--;
-		}
+		*uc_dst = *uc_src;
+		uc_dst += i;
+		uc_src += i;
 	}
 	return (dst);
 }
