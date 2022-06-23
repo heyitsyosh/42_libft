@@ -6,7 +6,13 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/05/28 23:29:26 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/23 23:02:45 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+	
+// }
