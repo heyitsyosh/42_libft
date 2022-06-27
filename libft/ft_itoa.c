@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:28:23 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/23 22:02:01 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/24 16:38:49 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,3 @@ char	*ft_itoa(int n)
 		put_in_digits(arr, buf);
 	return (arr);
 }
-
