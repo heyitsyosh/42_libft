@@ -6,55 +6,63 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:05 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/03 20:56:30 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/11 01:41:47 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// static size_t	malloc_size(const char *s, char c)
-// {
-// 	size_t	size;
+static size_t	malloc_size(const char *s, char c)
+{
+	size_t	size;
 
-// 	size = 0;
-// 	while (*s != '\0')
-// 	{
-// 		if (*s != c)
-// 		{
-// 			size++;
-// 			while (*s && *s != c)
-// 				s++;
-// 		}
-// 		else
-// 			s++;
-// 	}
-// 	return (size);
-// }
+	size = 0;
+	while (*s != '\0')
+	{
+		if (*s != c)
+		{
+			size++;
+			while (*s != '\0' && *s != c)
+				s++;
+		}
+		else
+			s++;
+	}
+	return (size);
+}
 
-// char	**ft_split(const char *s, char c)
-// {
-// 	char	**split;
-// 	size_t	i;
-// 	size_t	len;
+void	function(const char *s, char c, char **split, int i)
+{
+	size_t	len;
+	
+	while (*s != '\0')
+	{
+		if (*s != c)
+		{
+			len = 0;
+			while (*s != '\0' && *s != c)
+			{
+				len++;
+				s++;
+			}
+			*(split + i) = ft_substr(s - len, 0, len);
+			i++;
+		}
+		else
+			s++;
+	}
+	*(split + i) = '\0';
+}
 
-// 	if (s == NULL)
-// 		return (NULL);
-// 	i = 0;
-// 	split = malloc(sizeof(char *) * (malloc_size(s, c) + 1));
-// 	if (split == NULL)
-// 		return (NULL);
-// 	while (*s != '\0')
-// 	{
-// 		if (*s != c)
-// 		{
-// 			len = 0;
-// 			while (*s && *s != c && len++)
-// 				s++;
-// 			*(split + i + 1) = ft_substr(s - len, 0, len);
-// 		}
-// 		else
-// 			s++;
-// 	}
-// 	*(split + i) = 0;
-// 	return (split);
-// }
+char	**ft_split(const char *s, char c)
+{
+	char	**split;
+
+	if (s == NULL)
+		return (NULL);
+	split = malloc(sizeof(char *) * (malloc_size(s, c) + 1));
+	if (split == NULL)
+		return (NULL);
+	function(s, c, split, 0);
+	return (split);
+}

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/28 23:28:44 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/03 20:52:33 by myoshika         ###   ########.fr       */
+/*   Created: 2022/05/28 23:29:20 by myoshika          #+#    #+#             */
+/*   Updated: 2022/07/11 01:12:15 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	t_list	*tmp;
-	t_list	*head;
+	char			*ret;
+	unsigned int	i;
 
-	if (lst == NULL || f == NULL) //to null guard or to not null guard?? for the del and parameter function
+	if (s == NULL)
 		return (NULL);
-	head = NULL;
-	while (lst != NULL)
+	ret = ft_strdup(s);
+	i = 0;
+	if (ret == NULL || f == NULL)
+		return (NULL);
+	while (*(s + i) != '\0')
 	{
-		tmp = ft_lstnew(f(lst->content));
-		if (tmp == NULL)
-		{
-			ft_lstclear(&head, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&head, tmp);
-		lst = lst->next;
+		*(ret + i) = f(i, *(s + i));
+		i++;
 	}
-	return (head);
+	return (ret);
 }
