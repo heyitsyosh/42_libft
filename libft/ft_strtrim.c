@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/25 17:02:59 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/30 23:51:13 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (front + back > s1_len)
 		return (ft_strdup(""));
 	ret = (char *)malloc(s1_len - back - front + 1);
+	if (ret == NULL)
+		return (NULL);
 	ft_strlcpy(ret, s1 + front, s1_len - front - back + 1);
 	return (ret);
 }

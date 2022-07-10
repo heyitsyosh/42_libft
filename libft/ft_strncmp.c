@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:40 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/18 23:03:34 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/03 20:17:02 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*uc_s1;
+	unsigned char	*uc_s2;
 
+	uc_s1 = (unsigned char *)s1;
+	uc_s2 = (unsigned char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (*(s1 + i) && *(s2 + i) && i < n)
+	while (*(uc_s1 + i) && *(uc_s2 + i) && i < n)
 	{
-		if (*(s1 + i) != *(s2 + i))
+		if (*(uc_s1 + i) != *(uc_s2 + i))
 			break ;
 		i++;
 	}
 	if (i == n)
 		return (0);
-	return (*(s1 + i) - *(s2 + i));
+	return (*(uc_s1 + i) - *(uc_s2 + i));
 }

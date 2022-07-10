@@ -6,42 +6,55 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:05 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/27 21:43:32 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/03 20:56:30 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
 
-// int	c_count(char *s, char c, char *indices)
+// static size_t	malloc_size(const char *s, char c)
 // {
-// 	int	count;
+// 	size_t	size;
 
-// 	count = 0;
-// 	while (*s != NULL)
+// 	size = 0;
+// 	while (*s != '\0')
 // 	{
-// 		if (*s == c)
+// 		if (*s != c)
 // 		{
-// 			count++;
-// 			while (*s == c)
+// 			size++;
+// 			while (*s && *s != c)
 // 				s++;
 // 		}
-// 		s++;
+// 		else
+// 			s++;
 // 	}
-// 	return (count);
+// 	return (size);
 // }
 
-// char	**ft_split(char const *s, char c)
+// char	**ft_split(const char *s, char c)
 // {
 // 	char	**split;
-// 	char	*indices;
+// 	size_t	i;
+// 	size_t	len;
 
-// 	if (*s == NULL)
+// 	if (s == NULL)
 // 		return (NULL);
-// 	split = (char **)malloc();
+// 	i = 0;
+// 	split = malloc(sizeof(char *) * (malloc_size(s, c) + 1));
 // 	if (split == NULL)
 // 		return (NULL);
+// 	while (*s != '\0')
+// 	{
+// 		if (*s != c)
+// 		{
+// 			len = 0;
+// 			while (*s && *s != c && len++)
+// 				s++;
+// 			*(split + i + 1) = ft_substr(s - len, 0, len);
+// 		}
+// 		else
+// 			s++;
+// 	}
+// 	*(split + i) = 0;
 // 	return (split);
 // }
-
-//just gotta finish this one!
-

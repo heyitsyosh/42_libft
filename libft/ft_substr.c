@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:27 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/27 20:17:37 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:55:37 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub = (char *)malloc(ft_strlen((char *)s) - start + 1);
 	else
 		sub = (char *)malloc(len + 1);
+	if (sub == NULL)
+		return (NULL);
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }

@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:14 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/24 16:42:46 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/06/30 23:32:22 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*joined;
 	int		s1_len;
 
-	s1_len = ft_strlen(s1);
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	s1_len = ft_strlen(s1);
 	joined = (char *)malloc(s1_len + ft_strlen(s2) + 1);
 	if (joined == NULL)
 		return (NULL);
