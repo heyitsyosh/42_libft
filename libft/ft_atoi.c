@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/25 17:01:12 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:51:51 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static long	make_l(const char *str, int i, int sign, long num)
 			|| (sign == 1 && (num * 10) + sign * (*(str + i) - '0') < 0))
 			return (-1);
 		else if (num < INT_MIN / 10
-			|| (sign == -1 && (num * 10) + sign * (*(str + i) - '0') > 0))
+			|| (sign == -1 && (num * 10) + sign * (*(str + i) - '0') >= 0))
 			return (0);
 		num = (num * 10) + sign * (*(str + i) - '0');
 		i++;

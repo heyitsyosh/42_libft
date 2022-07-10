@@ -6,13 +6,13 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:20 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/22 04:26:29 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/03 20:58:03 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmap(char const *s, char (*f)(unsigned int, char))
 {
 	char			*ret;
 	unsigned int	i;
