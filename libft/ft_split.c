@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:05 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/11 21:16:52 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/11 21:41:12 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ static size_t	malloc_size(const char *s, char c)
 	return (size);
 }
 
-void	function(const char *s, char c, char **split, int i)
+static void	function(const char *s, char c, char **split, int i)
 {
 	size_t	len;
-	
+
 	while (*s != '\0')
 	{
 		if (*s != c)
