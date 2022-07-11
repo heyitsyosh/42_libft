@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:05 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/11 01:41:47 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/11 21:16:52 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	function(const char *s, char c, char **split, int i)
 		else
 			s++;
 	}
-	*(split + i) = '\0';
+	*(split + i) = 0;
 }
 
 char	**ft_split(const char *s, char c)
