@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:43 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/11 21:35:17 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/11 21:58:35 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_len;
 	char	*c_haystack;
 
-	needle_len = ft_strlen(needle);
 	c_haystack = (char *)haystack;
-//	if (*needle == '\0')
-//		return ((char *)haystack);
+	if (*needle == '\0' || ft_strlen(needle) == 0)
+		return ((char *)haystack);
+	needle_len = ft_strlen(needle);
 	if (len < needle_len)
 		return (NULL);
 	len -= needle_len - 1;
