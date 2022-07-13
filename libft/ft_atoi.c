@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 00:04:45 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 00:11:28 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,3 @@ int	ft_atoi(const char *str)
 	num = make_l(str, i, sign, 0);
 	return ((int)num);
 }
-
-//overflow????
-//consistency of null guarding.
-//meaning of null guarding
