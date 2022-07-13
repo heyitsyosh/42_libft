@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:35 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/13 23:54:18 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 01:56:55 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 
 	dst_len = ft_strlen(dst);
-	dst += dst_len;
+	dst += dst_len;	
+	if (dstsize == 0)
+		return (src_len);
 	if (dst_len >= dstsize)
 		return (dstsize + ft_strlen(src));
 	ft_strlcpy(dst, src, dstsize - dst_len);
