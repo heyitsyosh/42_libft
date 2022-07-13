@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 01:16:29 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 01:28:56 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ static long	long	make_l(const char *str, int i, int sign, long long num)
 {
 	while (*(str + i) && ((*(str + i) >= '0') && (*(str + i) <= '9')))
 	{
-		if (sign == 1 && ((num > LONG_MAX)))
-				//|| (num == LONG_MAX / 10 && *(str + i) > LONG_MAX % 10)))
+		if (sign == 1 && ((num > LONG_MAX / 10)))
+				|| (num == LONG_MAX / 10 && *(str + i) > LONG_MAX % 10)))
 			return (LONG_MAX);
-		else if (sign == -1 && ((num < LONG_MIN)))
-				//|| (num == LONG_MIN / 10 && *(str + i) > LONG_MIN % 10)))
+		else if (sign == -1 && ((num < LONG_MIN / 10)))
+				|| (num == LONG_MIN / 10 && *(str + i) > LONG_MIN % -10)))
 			return (LONG_MIN);
 		num = (num * 10) + sign * (*(str + i) - '0');
 		i++;
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 {
 	int			i;
 	int			sign;
-	long long	num;
+	long	num;
 
 	sign = 1;
 	i = 0;
