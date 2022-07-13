@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 00:45:59 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 00:50:30 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	is_space(char c)
 	return (0);
 }
 
-static long	make_l(const char *str, int i, int sign, long long num)
+static long	long make_l(const char *str, int i, int sign, long long num)
 {
 	while (*(str + i) && ((*(str + i) >= '0') && (*(str + i) <= '9')))
 	{
@@ -27,7 +27,7 @@ static long	make_l(const char *str, int i, int sign, long long num)
 				|| (num == LONG_MAX / 10 && *(str + i) > LONG_MAX % 10)))
 			return (LONG_MAX);
 		else if (sign == -1 && ((num < LONG_MIN / 10)
-				|| (num == LONG_MIN / 10 && sign * *(str + i) < LONG_MIN % 10)))
+				|| (num == LONG_MIN / 10 && *(str + i) < LONG_MIN % -10)))
 			return (LONG_MIN);
 		num = (num * 10) + sign * (*(str + i) - '0');
 		i++;
