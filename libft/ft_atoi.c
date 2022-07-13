@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 01:50:54 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 01:51:24 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ static long	make_l(const char *str, int i, int sign, long num)
 
 int	ft_atoi(const char *str)
 {
-	int			i;
-	int			sign;
+	int		i;
+	int		sign;
 	long	num;
 
 	sign = 1;
