@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:43 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 02:10:53 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/14 02:12:09 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		if (!ft_strncmp(haystack, needle, needle_len))
 			return (c_haystack);
-		c_haystack++;
+		haystack++;
 	}
 	return (NULL);
 }
