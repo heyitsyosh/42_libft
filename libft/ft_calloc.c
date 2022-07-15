@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:16 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/22 02:33:21 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/16 06:37:03 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;
 
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	if (count != 0 && (size_t) - 1 / count < size)
 		return (NULL);
 	ret = malloc(size * count);

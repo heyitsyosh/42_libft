@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 07:46:29 by myoshika          #+#    #+#             */
-/*   Updated: 2022/05/30 01:42:36 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/15 07:12:54 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (s[len] != '\0')
+	while (*(s + len) != '\0')
 		len++;
 	return (len);
 }

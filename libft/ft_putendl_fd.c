@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:28:58 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/22 00:00:08 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/16 02:50:28 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (s == NULL)
 		return ;
 	write(fd, s, ft_strlen(s));
-	write(fd, &"\n", 1);
+	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/14 01:51:24 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/16 02:48:34 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 static int	is_space(char c)
 {
-	if (c == 32 || (c <= 13 && c >= 9))
-		return (1);
-	return (0);
+	return (c == 32 || (c <= 13 && c >= 9));
 }
 
 static long	make_l(const char *str, int i, int sign, long num)
