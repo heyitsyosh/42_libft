@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:20 by myoshika          #+#    #+#             */
-/*   Updated: 2022/06/18 22:56:05 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/16 02:50:05 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*uc_s;
 
 	uc_s = (unsigned char *)s;
-	while (n-- != 0)
+	while (n--)
 	{
 		if (*uc_s == (unsigned char)c)
 			return ((void *)uc_s);
