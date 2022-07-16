@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:05 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/11 21:42:31 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/17 08:47:46 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,22 @@ static size_t	malloc_size(const char *s, char c)
 	return (size);
 }
 
-static void	function(const char *s, char c, char **split, int i)
+static int	check_malloc(char **split, int i)
+{
+	if (!*(split + i))
+	{	
+		while (i >= 0)
+		{
+			free(*(split + i));
+			i--;
+		}
+		free(split);
+		return (0);
+	}
+	return (1);
+}
+
+static void	*function(const char *s, char c, char **split, int i)
 {
 	size_t	len;
 
@@ -46,12 +61,15 @@ static void	function(const char *s, char c, char **split, int i)
 				s++;
 			}
 			*(split + i) = ft_substr(s - len, 0, len);
+			if (!check_malloc(split, i))
+				return (NULL);
 			i++;
 		}
 		else
 			s++;
 	}
 	*(split + i) = 0;
+	return (split);
 }
 
 char	**ft_split(const char *s, char c)
@@ -63,6 +81,6 @@ char	**ft_split(const char *s, char c)
 	split = malloc(sizeof(char *) * (malloc_size(s, c) + 1));
 	if (split == NULL)
 		return (NULL);
-	function(s, c, split, 0);
+	split = function(s, c, split, 0);
 	return (split);
 }
