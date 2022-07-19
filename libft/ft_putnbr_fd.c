@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:00 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/18 06:45:39 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:45:15 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		buf = -n;
 	}
-	while (buf / 10 >= div)
+	while (buf / 10 >= (unsigned int)div)
 		div *= 10;
 	while (div != 0)
 	{
