@@ -6,7 +6,7 @@
 #    By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 22:43:23 by myoshika          #+#    #+#              #
-#    Updated: 2022/07/11 01:11:10 by myoshika         ###   ########.fr        #
+#    Updated: 2022/07/18 06:11:51 by myoshika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,13 +23,16 @@ BONUS = $(addsuffix .c, $(BONUS_))
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
 
+ifeq ($(MAKECMDGOALS),bonus)
+OBJS += $(BONUS_OBJS)
+endif
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS) $(OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: all
 	
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)

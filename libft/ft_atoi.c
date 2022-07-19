@@ -6,23 +6,23 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:06 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/16 02:48:34 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:17:57 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_space(char c)
+static int	is_whitespace(char c)
 {
-	return (c == 32 || (c <= 13 && c >= 9));
+	return (c == 32 || (9 <= c && c <= 13));
 }
 
-static long	make_l(const char *str, int i, int sign, long num)
+static long	make_l(const char *str, size_t i, int sign, long num)
 {
 	long	min;
 
 	min = LONG_MIN;
-	while (*(str + i) && ((*(str + i) >= '0') && (*(str + i) <= '9')))
+	while (*(str + i) && (*(str + i) >= '0' && *(str + i) <= '9'))
 	{
 		if (sign == 1 && ((num > LONG_MAX / 10)
 				|| (num == LONG_MAX / 10 && *(str + i) - '0' > LONG_MAX % 10)))
@@ -38,13 +38,13 @@ static long	make_l(const char *str, int i, int sign, long num)
 
 int	ft_atoi(const char *str)
 {
-	int		i;
+	size_t	i;
 	int		sign;
 	long	num;
 
 	sign = 1;
 	i = 0;
-	while (is_space(*(str + i)))
+	while (is_whitespace(*(str + i)))
 		i++;
 	if ((*(str + i) == '+' || *(str + i) == '-') && *(str + i))
 	{
