@@ -6,16 +6,16 @@
 /*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/19 13:42:43 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:44:24 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	s(int dir, char const *s1, char const *set)
+static size_t	search(int dir, char const *s1, char const *set)
 {
 	size_t	ret;
-	size_t s1_len;
+	size_t	s1_len;
 
 	s1_len = ft_strlen(s1);
 	ret = 0;
