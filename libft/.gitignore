@@ -3,3 +3,4 @@
 libftTester
 libft.a
 *.o
+main.c
