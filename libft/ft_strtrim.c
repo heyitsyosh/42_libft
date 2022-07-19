@@ -6,11 +6,12 @@
 /*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/19 13:44:24 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:24:23 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	search(int dir, char const *s1, char const *set)
 {
@@ -19,10 +20,12 @@ static size_t	search(int dir, char const *s1, char const *set)
 
 	s1_len = ft_strlen(s1);
 	ret = 0;
-	while (dir == 1 && s1_len-- && ft_strchr(set, *(s1 + ret)))
-		ret++;
-	while (dir == -1 && s1_len-- && ft_strchr(set, *(s1 - ret)))
-		ret++;
+	if (dir == 1)
+		while (s1_len-- && ft_strchr(set, *(s1 + ret)))
+			ret++;
+	if (dir == -1)
+		while (s1_len - ret > 0 && ft_strchr(set, *(s1 + s1_len - 1 - ret)))
+			ret++;
 	return (ret);
 }
 
@@ -39,7 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	front = search(1, s1, set);
-	back = search(-1, s1 + s1_len - 1, set);
+	back = search(-1, s1, set);
+	printf("%d, %d\n", (int)front, (int)back);
 	if (front + back < front || front + back > s1_len)
 		return (ft_strdup(""));
 	ret = (char *)malloc(s1_len - front - back + 1);
