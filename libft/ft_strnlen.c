@@ -6,15 +6,15 @@
 /*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:58:42 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/19 13:42:43 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:57:46 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strnlen(const char *s, size_t maxlen)
+size_t	ft_strnlen(const char *s, size_t maxlen)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (maxlen-- && *(s + len) != '\0')
