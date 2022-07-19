@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:00 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/19 13:45:15 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:47:00 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_putnbr_fd(int n, int fd)
 	int				tmp;
 	unsigned int	buf;
 
-	buf = n;
 	div = 1;
-	if (buf < 0)
+	if (n < 0)
 	{
 		write(fd, "-", 1);
 		buf = -n;
 	}
+	buf = n;
 	while (buf / 10 >= (unsigned int)div)
 		div *= 10;
 	while (div != 0)
