@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:28:37 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/13 20:56:18 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/17 19:08:55 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL || del == NULL)
-		return ;
-	del(lst->content);
+	if (!(lst == NULL || del == NULL))
+		del(lst->content);
 	free(lst);
 }
