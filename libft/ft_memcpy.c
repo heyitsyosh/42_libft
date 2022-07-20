@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
+/*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:25 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/19 13:42:43 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:04:43 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*uc_dst;
-	unsigned char	*uc_src;
-	size_t			i;
+	unsigned char		*uc_dst;
+	const unsigned char	*uc_src = src;
+	size_t				i;
 
 	if (dst == src)
 		return (NULL);
 	uc_dst = dst;
-	uc_src = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
