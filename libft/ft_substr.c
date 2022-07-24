@@ -6,12 +6,12 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:29:27 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/20 14:52:02 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/22 19:07:31 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//("", 0, 1) expected ("") but got NULL
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	sub_len;

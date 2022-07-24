@@ -6,7 +6,7 @@
 /*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:28 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/20 10:05:06 by myoshika         ###   ########.fr       */
+/*   Updated: 2022/07/24 11:53:10 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	int					i;
 
 	if (dst == src || len == 0)
-		return (dst);
+		return (NULL);
 	uc_dst = dst;
 	i = 1;
 	if (dst > src)
