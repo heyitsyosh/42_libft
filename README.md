@@ -1,5 +1,5 @@
 <h1 align="center">
- 42_libft
+ libft
 </h1>
 
 ✅125/100
