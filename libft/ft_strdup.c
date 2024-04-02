@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myoshika <myoshika@student.42.fr>          +#+  +:+       +#+        */
+/*   By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 23:20:32 by myoshika          #+#    #+#             */
-/*   Updated: 2022/07/24 11:52:43 by myoshika         ###   ########.fr       */
-/*   Updated: 2022/07/20 17:10:43 by myoshika         ###   ########.fr       */
+/*   Updated: 2024/04/02 07:43:09 by myoshika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h> //malloc
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
