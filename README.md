@@ -5,6 +5,8 @@
 *<p align="center">This project is your very first project as a student at 42.<br>
 You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.</p>*
 
+## Score: 125/100🎉
+
 ## Usage:  
 First, enter directory with `cd libft`.  
 Then use any makefile command.  
@@ -12,13 +14,17 @@ To use in projects, compile with `libft.a` and `-I path/to/libft.h`.
 
 #### Makefile Commands:
 ```C
-make        //compile library (to libft.a)
+make        //compile mandatory (to libft.a)
+make bonus  //compile mandatory and bonus (to libft.a)
 make clean  //delete .o
 make fclean //delete .o and .a
-make re     //delete .o and .a and recompile library
+make re     //delete .o and .a and recompile mandatory
 ```
 
 ## Overview:
+Mandatory: <ctype.h>, <string.h>, <stdlib.h>, non-standard functions  
+Bonus: linked list util functions
+
 #### From `<ctype.h>`:
 | Function | Description |
 | ---------- | ----------- |
