@@ -16,14 +16,14 @@ To use in projects, compile with `libft.a` and `-I path/to/libft.h`.
 ```C
 make        //compile mandatory (to libft.a)
 make bonus  //compile mandatory and bonus (to libft.a)
+//mandatory: <ctype.h>, <string.h>, <stdlib.h>, non-standard functions
+//bonus:     linked list util functions
 make clean  //delete .o
 make fclean //delete .o and .a
 make re     //delete .o and .a and recompile mandatory
 ```
 
 ## Overview:
-Mandatory: <ctype.h>, <string.h>, <stdlib.h>, non-standard functions  
-Bonus: linked list util functions
 
 #### From `<ctype.h>`:
 | Function | Description |
