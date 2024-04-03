@@ -52,7 +52,7 @@ make re     //delete .o and .a and recompile library
 | Function | Description |
 | ---------- | ----------- |
 | [**ft_atoi**](https://github.com/heyitsyosh/42_libft/blob/main/libft/ft_atoi.c) | Converts a string to an integer. |
-| [**ft_calloc**](https://github.com/heyitsyosh/42_libft/blob/main/libft/ft_calloc.c) | Allocates and initializes memory to 0. |
+| [**ft_calloc**](https://github.com/heyitsyosh/42_libft/blob/main/libft/ft_calloc.c) | Allocates and initializes memory area to 0. |
 
 #### `Non-standard functions`:
 | Function | Description |
