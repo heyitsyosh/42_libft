@@ -1,6 +1,0 @@
-.gitignore
-.vscode
-libftTester
-libft.a
-*.o
-main.c

@@ -6,7 +6,7 @@
 #    By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 22:43:23 by myoshika          #+#    #+#              #
-#    Updated: 2024/04/03 18:14:52 by myoshika         ###   ########.fr        #
+#    Updated: 2024/04/03 18:18:48 by myoshika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,16 +60,23 @@ SRCS_ = ft_isalpha \
 		ft_lstiter \
 		ft_lstmap
 SRCS = $(addsuffix .c, $(SRCS_))
-
-OBJS = $(SRCS:.c=.o)
+OBJS_DIR = objs/
+OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
 
 all: $(NAME)
+
+$(OBJS_DIR):
+	mkdir -p $(OBJS_DIR)
+
+$(OBJS_DIR)%.o: %.c | $(OBJS_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -rf $(OBJS_DIR)
 
 fclean: clean
 	rm -f $(NAME)
