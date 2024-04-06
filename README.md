@@ -9,7 +9,7 @@ You will need to recode a few functions of the C standard library as well as som
 First, enter directory with `cd libft`.  
 Then use any Makefile command.  
 
-To use in projects, compile project with `-L<path/to/directory/with/libft.a> -lft`.  
+To use in projects, compile with `-L<path/to/directory/with/libft.a> -lft`.  
 Alternatively, compile project files with `<path/to/libft.a>`.  
 Make sure to include `libft.h` appropriately in your source code.
 
