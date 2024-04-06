@@ -7,14 +7,9 @@ You will need to recode a few functions of the C standard library as well as som
 
 ## Score: 125/100🎉
 
-## Usage:  
+## Set-up:  
 First, enter directory with `cd libft`.  
 Then use any Makefile command.  
-
-To use in projects, compile with `-L<path/to/directory/with/libft.a> -lft`.  
-Alternatively, compile project files directly with `<path/to/libft.a>`.  
-Make sure to include `libft.h` appropriately in your source code.
-
 #### Makefile Commands:
 ```C
 make        //compile mandatory (to libft.a)
@@ -26,8 +21,17 @@ make fclean //delete .o and .a
 make re     //delete .o and .a and recompile mandatory
 ```
 
-## Overview:
+## Usage:
+To use in projects, compile with `-L<path/to/directory/with/libft.a> -lft`.  
+Alternatively, compile project files directly with `path/to/libft.a`.  
+Make sure to include `libft.h` appropriately in your source code.
+#### Compilation Examples:
+```
+gcc main.c -L./libft/ -lft
+gcc main.c ./libft/libft.a
+```
 
+## Overview:
 #### From `<ctype.h>`:
 | Function | Description |
 | ---------- | ----------- |
