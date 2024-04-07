@@ -6,16 +6,13 @@
 #    By: myoshika <myoshika@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 22:43:23 by myoshika          #+#    #+#              #
-#    Updated: 2024/04/03 18:18:48 by myoshika         ###   ########.fr        #
+#    Updated: 2024/04/07 22:55:31 by myoshika         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-
-SRCS_ = ft_isalpha\
+SRCS = ft_isalpha\
 		ft_isdigit\
 		ft_isalnum\
 		ft_isascii\
@@ -59,9 +56,12 @@ SRCS_ = ft_isalpha\
 		ft_lstclear\
 		ft_lstiter\
 		ft_lstmap
-SRCS = $(addsuffix .c, $(SRCS_))
 OBJS_DIR = objs/
-OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
+OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS)))
+
+CFLAGS = -Wall -Wextra -Werror
+
+# **************************************************************************** #
 
 all: $(NAME)
 
@@ -75,11 +75,11 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 	rm -rf $(OBJS_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
