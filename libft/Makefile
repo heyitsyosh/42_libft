@@ -63,7 +63,6 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	
 clean:
-	$(RM) $(OBJS)
 	rm -rf $(OBJS_DIR)
 
 fclean: clean
