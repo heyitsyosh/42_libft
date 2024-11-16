@@ -44,8 +44,8 @@ SRCS = ft_isalpha\
 		ft_lstclear\
 		ft_lstiter\
 		ft_lstmap
-OBJS_DIR = objs/
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS)))
+OBJS_DIR = objs
+OBJS = $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(SRCS)))
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -56,7 +56,7 @@ all: $(NAME)
 $(OBJS_DIR):
 	mkdir -p $(OBJS_DIR)
 
-$(OBJS_DIR)%.o: %.c | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
